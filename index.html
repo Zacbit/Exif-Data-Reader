@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <title>Find Exif Data</title>
+</head>
+<body ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+    <div class="dimmer" id="dimmer">
+        <div class="popup" id="popup">
+            <h1>Error
+                <small>Please attach a file before analysing it!</small>
+            <div class="button" onclick="letter_index_close()">OK</div>
+        </div>
+    </div>
+    <div class="main_con">
+        <div class="back display_none" id="back" onclick="backReview()"><i class='bx bx-arrow-back' ></i></div>
+        <div class="prev display_none" id="prev" onclick="previousReview()"><i class='bx bx-chevron-left'></i></div>
+        <div class="next display_none" id="next" onclick="nextReview()"><i class='bx bx-chevron-right'></i></div>
+        <div class="first_con" id='first_con'>
+            <h1>Find an Image's Exif Data
+                <small>By Abdirazak Hassan</small></h1>
+            <div class="drag_box">
+                <i class='bx bx-cloud-upload upload_icon'></i>
+                <h2>Drag and Drop or <label for="imageUpload">Browse</label> to choose a file.</h2>
+                <input type='file' id="imageUpload" onchange="readURL(this);" accept=".png, .jpg, .jpeg, .gif" multiple/>
+            </div>
+            <!-- <h2 style="text-align:left; margin-left:35px; margin-top: 25px;"><label for="">Or Paste Link</label> of image below and hit enter to upload.</h2>
+            <input type="text" onchange="link_upload(this)" placeholder="eg: https://www.google.com"> -->
+            <div class="uploaded_box" id="uploaded_box">
+            </div>
+            <div class="button analyse" id='analyse_button' onclick="analyse()">Analyse</div>
+        </div>
+        <div class="second_con" id="second_con"></div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/main.js"></script>
+</html>
+            
