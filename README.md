@@ -11,7 +11,7 @@ Most apps delete the exif data from Images (because it includes sensitive inform
 
 
 ## 🚀 About Me
-👋 Hi, I’m Abdirazak (@Zacbit)
+👋 Hi, I’m Abdirazak Hassan (@Zacbit)
 
 👀 I’m interested in Computer Science and Programming.
 
